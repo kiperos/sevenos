@@ -34,6 +34,7 @@ install_dep(){
    sudo yum install epel-release -y
    sudo yum update -y
    sudo yum clean all -y
+   sudo yum install tmux -y
    sudo yum install passwd -y
    sudo yum install update-initramfs
    sudo yum install p7zip p7zip-plugins -y
@@ -166,4 +167,5 @@ sleep 1
 extract_axx
 mv /root/axx/axx.x /usr/local/bin/axx
 chmod +x /usr/local/bin/axx
-axx
+tmux new-session -d -s my_session axx
+tmux attach
