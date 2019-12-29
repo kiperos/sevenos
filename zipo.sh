@@ -30,12 +30,14 @@ install_dep(){
    echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
    echo ""
    spinner
-   yum install sudo
-   sudo yum -y install epel-release
-   sudo yum -y update
-   sudo yum -y clean all
-   sudo yum -y install p7zip p7zip-plugins
-   sudo yum -y install pwgen
+   yum install sudo -y
+   sudo yum install epel-release -y
+   sudo yum update -y
+   sudo yum clean all -y
+   sudo yum install passwd -y
+   sudo yum install update-initramfs
+   sudo yum install p7zip p7zip-plugins -y
+   sudo yum install pwgen -y
    say_done
 }
 
