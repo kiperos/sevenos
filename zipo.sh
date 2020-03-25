@@ -167,5 +167,5 @@ sleep 1
 extract_axx
 mv /root/axx/axx.x /usr/local/bin/axx
 chmod +x /usr/local/bin/axx
-tmux new-session -d -s my_session axx
-tmux attach
+#tmux new-session -d -s my_session axx
+#tmux attach
